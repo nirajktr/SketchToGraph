@@ -53,11 +53,13 @@ function draw() {
 }
 
 function mousePressed() {
-    next = 0;
-    painting = true;
-    previous.x = mouseX;
-    previous.y = mouseY;
-    paths.push(new Path());
+    if (mouseX >= 0 && mouseX <= width && mouseY >= 0 && mouseY <= height) {
+        next = 0;
+        painting = true;
+        previous.x = mouseX;
+        previous.y = mouseY;
+        paths.push(new Path());
+    }
 }
 
 function mouseReleased() {
@@ -68,7 +70,7 @@ function mouseReleased() {
 
     // Generate equation from coefficients
     let equation = generateEquation(coefficients);
-    console.log("Generated Equation:", equation);
+    console.log("Generated Equation =", equation);
 
     // Display the equation
     document.getElementById('equation').innerText = equation;
