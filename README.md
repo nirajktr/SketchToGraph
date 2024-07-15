@@ -10,11 +10,10 @@ Sketch2Graph is a web-based application that allows users to draw on a canvas an
 - [Usage](#usage)
 - [Technologies](#technologies)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Demo
 
-You can try out Sketch2Graph by visiting [this link]([#](https://nirajktr.github.io/SketchToGraph/)).
+You can try out Sketch2Graph by visiting [this link](https://nirajktr.github.io/SketchToGraph/).
 
 ## Features
 
@@ -44,17 +43,6 @@ You can try out Sketch2Graph by visiting [this link]([#](https://nirajktr.github
 2. Draw on the canvas using your mouse.
 3. Release the mouse button to generate the corresponding Fourier Transform equation.
 4. The generated equation will be displayed below the canvas.
-
-## Project Structure
-
-Sketch2Graph/
-├── assets/
-│ └── styles.css # CSS styles for the project
-├── scripts/
-│ ├── sketch.js # Handles drawing on the canvas
-│ └── fourier.js # Performs Fourier Transform and generates the equation
-├── index.html # Main HTML file
-└── README.md # Project documentation
 
 ## Technologies
 
@@ -87,5 +75,3 @@ Contributions are welcome! Please follow these steps to contribute:
     ```
 
 5. Open a pull request on GitHub.
-
-## License
