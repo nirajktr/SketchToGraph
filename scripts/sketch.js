@@ -1,24 +1,15 @@
-// sketch.js ..
-
-// All the paths
-let paths = [];
-let painting = false;
-
-// How long until the next circle
-let next = 0;
-
-let current;
-let previous;
-
 // Array to store drawn points
 let points = [];
 
 // Fourier coefficients
 let coefficients = [];
 
+let painting = false;
+let next = 0;
+let previous;
+
 function setup() {
     createCanvas(800, 600);
-    current = createVector(0, 0);
     previous = createVector(0, 0);
 }
 
@@ -58,20 +49,24 @@ function mousePressed() {
         painting = true;
         previous.x = mouseX;
         previous.y = mouseY;
-        paths.push(new Path());
     }
 }
 
 function mouseReleased() {
     painting = false;
 
-    // Perform Fourier Transform on points
-    coefficients = fourierTransform(points);
+    if (points.length > 0) {
+        // Perform Fourier Transform on points
+        coefficients = fourierTransform(points);
 
-    // Generate equation from coefficients
-    let equation = generateEquation(coefficients);
-    console.log("Generated Equation =", equation);
+        // Generate equation from coefficients
+        let equation = generateEquation(coefficients);
+        console.log("Generated Equation =", equation);
 
-    // Display the equation
-    document.getElementById('equation').innerText = equation;
+        // Display the equation
+        document.getElementById('equation').innerText = equation;
+
+        // Clear points array for next drawing
+        points = [];
+    }
 }
