@@ -1,4 +1,4 @@
-# Sketch2Graph
+# [Sketch2Graph](https://nirajktr.github.io/SketchToGraph/)
 
 Sketch2Graph is a web-based application that allows users to draw on a canvas and converts the drawn points into a mathematical equation using Fourier Transform. This project uses `p5.js` for the drawing interface and JavaScript for performing the Fourier Transform and generating the equation.
 
